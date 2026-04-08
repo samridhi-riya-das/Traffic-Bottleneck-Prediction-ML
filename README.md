@@ -11,6 +11,12 @@ Team Name: SYNAPSE
 ##  Institution
 Shri Shankaracharya Technical Campus (SSTC)
 
+This repository contains the complete solution including code, presentation, and demo for the Traffic Bottleneck ML project.
+## 🔗 Project Links
+
+ -PPT Presentation: https://1drv.ms/p/c/d26496c1a854bf1d/IQD_nnLaWrCIRqYkLjFYdiTUAWqDC9kg4PUsOwG9htkoWOk?e=uUK1St  
+- Demo Video:    
+
 ##  Workflow
 
 1. Data Collection  
