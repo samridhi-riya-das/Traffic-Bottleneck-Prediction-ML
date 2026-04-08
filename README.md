@@ -15,7 +15,7 @@ This repository contains the complete solution including code, presentation, and
 ## 🔗 Project Links
 
  -PPT Presentation: https://1drv.ms/p/c/d26496c1a854bf1d/IQD_nnLaWrCIRqYkLjFYdiTUAWqDC9kg4PUsOwG9htkoWOk?e=uUK1St  
-- Demo Video:    
+- Demo Video: https://youtu.be/UV0dIz2TXFo?feature=shared    
 
 ##  Workflow
 
