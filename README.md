@@ -71,4 +71,14 @@ Run the app:
 streamlit run app.py
 
 7. Deployment  
-   - Streamlit app for real-time user input and prediction  
+   - Streamlit app for real-time user input and prediction
+  
+## 💻 Running in VS Code
+
+1. Open the project folder in VS Code  
+2. Open terminal (Ctrl + `)  
+3. Install dependencies:
+   pip install -r requirements.txt  
+4. Run the app:
+   streamlit run app.py  
+5. The app will open in your browser  
