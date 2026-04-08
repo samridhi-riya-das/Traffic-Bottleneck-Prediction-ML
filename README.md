@@ -57,7 +57,18 @@ Our current system is a prototype, but it can be extended into a real-world smar
 
 ### 🧭 Intelligent Route Navigation
 - Suggest alternative routes based on congestion prediction  
-- Improve travel time and efficiency  
+- Improve travel time and efficiency
+
+## 🚀 How to Run our demo
+
+1. Download or clone the repository
+2. Open terminal in the project folder
+
+Install dependencies:
+pip install -r requirements.txt
+
+Run the app:
+streamlit run app.py
 
 7. Deployment  
    - Streamlit app for real-time user input and prediction  
