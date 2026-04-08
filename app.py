@@ -68,28 +68,55 @@ if st.button("Predict Traffic"):
 
     # ------------------- ANALYSIS SECTION -------------------
 
-st.subheader("📊 Traffic Data Analysis")
+st.subheader("📊 Traffic Insights Dashboard")
 
-# 1. Traffic Level Distribution
-st.write("Traffic Level Distribution")
+import matplotlib.pyplot as plt
+
+# 1. Traffic Distribution (Pie Chart - more attractive)
+st.write("### Traffic Distribution")
+traffic_counts = data['traffic_level'].value_counts()
+
 fig1 = plt.figure()
-data['traffic_level'].value_counts().plot(kind='bar')
-plt.xlabel("Traffic Level")
-plt.ylabel("Count")
+plt.pie(traffic_counts, labels=traffic_counts.index, autopct='%1.1f%%')
+plt.title("Traffic Level Share")
 st.pyplot(fig1)
 
-# 2. Speed vs Density
-st.write("Speed vs Density")
+
+# 2. Speed vs Density (colored scatter)
+st.write("### Speed vs Density Relationship")
+
+colors = {'Low': 'green', 'Medium': 'orange', 'High': 'red'}
+color_values = data['traffic_level'].map(colors)
+
 fig2 = plt.figure()
-plt.scatter(data['density'], data['speed'])
+plt.scatter(data['density'], data['speed'], c=color_values, alpha=0.6)
 plt.xlabel("Density")
 plt.ylabel("Speed")
+plt.title("Speed vs Density (colored by traffic level)")
 st.pyplot(fig2)
 
-# 3. Feature Importance
-st.write("Feature Importance")
+
+# 3. Average Speed by Traffic Level (Bar Chart)
+st.write("### Average Speed by Traffic Level")
+
+avg_speed = data.groupby('traffic_level')['speed'].mean()
+
+fig3 = plt.figure()
+avg_speed.plot(kind='bar', color=['green', 'orange', 'red'])
+plt.ylabel("Average Speed")
+plt.title("Speed decreases as congestion increases")
+st.pyplot(fig3)
+
+
+# 4. Feature Importance (clean horizontal chart)
+st.write("### Feature Importance")
+
 importance = pd.Series(model.feature_importances_, index=X.columns)
 
+fig4 = plt.figure()
+importance.sort_values().plot(kind='barh')
+plt.title("Which factors influence traffic most?")
+st.pyplot(fig4)
 fig3 = plt.figure()
 importance.sort_values().plot(kind='barh')
 plt.xlabel("Importance")
